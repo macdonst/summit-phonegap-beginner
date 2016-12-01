@@ -4,22 +4,22 @@ title: Module 1&#58; Project Setup
 ---
 
 ## Retrieve the Final Solution App
-The final version of the project we'll be building in this workshop is located at [http://github.com/hollyschinsky/pgday-eu-star-track](https://github.com/hollyschinsky/pgday-eu-star-track).
-Before moving forward we'll create a local project with it for reference. 
+The final version of the project we'll be building in this workshop is located at [http://github.com/macdonst/wwc-london-star-track](https://github.com/macdonst/wwc-london-star-track).
+Before moving forward we'll create a local project with it for reference.
 
 #### Steps
-1. Create a working directory named `pgday2016` on your hard drive
-2. From the command line, `cd` into it, then use the PhoneGap CLI with the following command to create a local version of the final project named `pgday-eu-star-track`
+1. Create a working directory named `wwcl` on your hard drive
+2. From the command line, `cd` into it, then use the PhoneGap CLI with the following command to create a local version of the final project named `wwc-london-star-track`
 
-        phonegap create pgday-eu-star-track --template https://github.com/hollyschinsky/pgday-eu-star-track
+        phonegap create wwc-london-star-track --template https://github.com/macdonst/wwc-london-star-track
 
    Alternatively you could use git to clone the project as well:
-    
-        git clone https://github.com/hollyschinsky/pgday-eu-star-track
 
-2. At this point you should have a folder called `pgday-eu-star-track` containing the copy of the final project in your working directory:
+        git clone https://github.com/macdonst/wwc-london-star-track
 
-        ~/pgday2016/pgday-eu-star-track
+2. At this point you should have a folder called `wwc-london-star-track` containing the copy of the final project in your working directory:
+
+        ~/wwcl/wwc-london-star-track
 
 >This final project can be used for reference in case you get stuck at any point in the workshop or simply want to
 follow along using it rather than code from your own version.
@@ -32,7 +32,7 @@ the base Star Track sample with some additional features. The final result shoul
   `npm install -g phonegap`. PhoneGap CLI 6.2.2 had a bug that could interfere with certain parts of this workshop so please ensure you're not using
 that version. To check simply run the command `phonegap -v`.
 
-1. `cd` back into the root of the working directory (`~/pgdayeu/`)
+1. `cd` back into the root of the working directory (`~/wwcl/`)
 
 2. Create a new PhoneGap project using the PhoneGap CLI and passing the name of the starter *Star Track* PhoneGap template.
 
@@ -44,17 +44,17 @@ that version. To check simply run the command `phonegap -v`.
 
 3. By the end of this step you should have two folders in your working directory:
 
-    - `~/pgday2016/pgday-eu-star-track` - the final project for reference
-    - `~/pgday2016/myStarTrack`         - the base star track app to enhance
-    
->You can view the list of PhoneGap templates available by running `phonegap template list` from the 
+    - `~/wwcl/wwc-london-star-track` - the final project for reference
+    - `~/wwcl/myStarTrack`         - the base star track app to enhance
+
+>You can view the list of PhoneGap templates available by running `phonegap template list` from the
 PhoneGap CLI.     
 
 ## Run the base app
 Before moving on, ensure your newly created Star Track app based on the template works since we will be building on this
 throughout the workshop. Below is what it looks like running on Android with material design, and at the end of this section
-are screenshots of what it looks like running on iOS.  
-    
+are screenshots of what it looks like running on Android.  
+
    <img class="screenshot-full" src="images/star-track-screens-android.jpg"/><br>
 
 To try it out, choose from the following options:
@@ -62,7 +62,7 @@ To try it out, choose from the following options:
 - `Serve` your app and view it with the PhoneGap Developer App on a mobile device or in the browser (recommended approach).
 
    - **Serve with PhoneGap CLI**
-     1. From the command line, first ensure you're in the root of your new project (`~pgday2016/myStarTrack`)
+     1. From the command line, first ensure you're in the root of your new project (`~wwcl/myStarTrack`)
      2. Run `phonegap serve`
      3. Connect to the URL reported from the `serve` command in the PhoneGap Developer app on a mobile device (or in a browser using `localhost` and the port number from the command)
 

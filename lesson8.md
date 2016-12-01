@@ -31,12 +31,14 @@ You can configure your app with specific preferences and settings depending on t
          <preference name="Orientation" value="all" />
 
 3. Specifying intents to allow
+
 - **ios**
 
          <allow-intent href="itms:*" />
          <allow-intent href="itms-apps:*" />
 
-    - **android**
+- **android**
+
          <allow-intent href="market:*" />
 
 >All of these settings are already included in your base template project so no action is required.
@@ -47,7 +49,7 @@ whitelist approved sites amongst other things. To use it you need to ensure you 
 added to your project (already included in the base template by default) and add a meta tag to your index.html that declares the specific policy
  you want to apply for your app.
 
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com` `https://api.spotify.com 'unsafe-eval' 'unsafe-inline' ws://localhost:3000; 
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com` `https://api.spotify.com 'unsafe-eval' 'unsafe-inline' ws://localhost:3000;
     style-src 'self' 'unsafe-inline';` `media-src *; img-src * data:">
 
 
@@ -57,7 +59,7 @@ To learn more about how to customize the CSP specifically, check out the [Cordov
 
 3. Icons and Splash screens - set up the paths for each platform with the different required attributes according. The icons
 have already been set up in the Star Track app so you can use the `config.xml` file for ar reference. See the
-[Official Cordova guides](https://cordova.apache.org/docs/en/latest/config_ref/images.html) for details. 
+[Official Cordova guides](https://cordova.apache.org/docs/en/latest/config_ref/images.html) for details.
 
            <platform name="ios">
                <icon height="180" src="res/icon/ios/icon-60@3x.png" width="180" />
@@ -105,12 +107,12 @@ these assets will all be copied down to their respective platform locations for 
         <preference name="SplashScreenDelay" value="3000"/>
         <preference name="FadeSplashScreenDuration" value="300" />
 
-   >See the final app `config.xml` file [here](https://github.com/hollyschinsky/spotify-browser/blob/master/config.xml) to see what icons and splash screens the tool adds into the config.xml
+   >See the final app `config.xml` file [here](https://github.com/macdonst/spotify-browser/blob/master/config.xml) to see what icons and splash screens the tool adds into the config.xml
     and all the different sizes supported.
 
 ### Plugin Dependencies
 At this point it's worth going over all of the plugins this project relies on. You should always ensure they have been saved to your
- config.xml so they will be automatically installed when you decide to use the CLI to build locally and outside of the PhoneGap 
+ config.xml so they will be automatically installed when you decide to use the CLI to build locally and outside of the PhoneGap
  Developer app.
 
         <plugin name="cordova-plugin-statusbar" spec="~1.0.1" />

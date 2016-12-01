@@ -28,7 +28,7 @@ Push notifications are a common requirement when developing mobile apps. See the
 There are a vast number of plugins currently available for Cordova but you still may find yourself needing a specific native feature that is not already
   supported. Learn how to write your own plugin below.
 
-- [Jesse MacFadyen's PhoneGap Day 2016 Slides](http://purplecabbage.github.io/slides/pgd16Plugins/index.html)
+- [Jesse MacFadyen's PhoneGap Day Slides](http://purplecabbage.github.io/slides/pgd16Plugins/index.html)
 
 ### App Submission (provisioning, code signing, submitting to app stores)
 - Attend **App Submission** workshop by Shazron Abdullah at 5pm today!
