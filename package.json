@@ -1,0 +1,21 @@
+{
+  "name": "wwc-london-star-track",
+  "version": "1.0.0",
+  "description": "> A Hello World template built with PhoneGap",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/macdonst/wwc-london-star-track.git"
+  },
+  "author": "PhoneGap Team",
+  "license": "Apache-2.0",
+  "keywords": [
+    "ecosystem:phonegap",
+    "ecosystem:cordova",
+    "cordova:template",
+    "phonegap:template"
+  ],
+  "bugs": {
+    "url": "https://github.com/macdonst/wwc-london-star-track/issues"
+  },
+  "homepage": "https://github.com/macdonst/wwc-london-star-track"
+}
