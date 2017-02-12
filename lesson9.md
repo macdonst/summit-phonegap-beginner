@@ -1,73 +1,103 @@
 ---
 layout: module
-title: Module 9&#58; Next Steps
+title: Lesson 9&#58; Debugging your App
 ---
 
-## Next Steps
-Now that you've got a basic app up and running you may be looking for additional information on where to proceed. This module is meant to share some useful resources for taking your app development process to the next level.
+## Overview
+In this module we'll cover useful debugging tools that you should know how to use as a hybrid app developer. There are many options for debugging
+ your apps regardless of how you're running your app; on device/emulator, in the browser or in the PhoneGap Developer App.  
 
-### Testing, Profiling
-You'll want to find tools for helping you test and debug your apps. You should also look at using a tool to measure performance metrics. Here are some
-links to tools and resources that can help you further:
+### iOS Remote Debugging via Safari
+This feature was introduced in iOS6 and allows you to use the Safari web browser to debug web applications running on iOS devices, and this includes PhoneGap apps.  
 
-  - [PhoneGap App Performance Testing Repo](https://github.com/blefebvre/pg-app-perf) - Bruce Lefebvre (spoke at PhoneGap Day EU 2016)
-  - [browser-perf](https://github.com/axemclion/browser-perf) - a node based tool that measures various performance metrics of a web page or hybrid application via the browser (Chrome, Firefox, IE)
-  - [Remote Debugging on Android](http://geeklearning.io/apache-cordova-and-remote-debugging-on-android/)
-  - [Debugging with Safari Web Inspector](http://phonegap-tips.com/articles/debugging-ios-phonegap-apps-with-safaris-web-inspector.html)
+#### Requirements
+- Mac OS X
+- USB Cable
+- Safari Version 6.0+
+- iOS Device or Simulator
 
-### Securing your App
-- Attend [Steve Gill's](https://twitter.com/stevesgill) App Privacy and Security for PhoneGap Developers workshop today at 2:15
-- [Tommy Williams PhoneGap Day US 2016 Workshop Slides](http://devgeeks.github.io/pixfor-vulnerable/assets/player/KeynoteDHTMLPlayer.html)
+>  You can remote debug a PhoneGap application running on a simulator if you don't have a device handy for testing.
+If you're using the PhoneGap CLI in particular, ensure to install [ios-sim](https://github.com/phonegap/ios-sim) to easily launch and simulate your apps on iOS.</div>
 
-### Push Notification Support
-Push notifications are a common requirement when developing mobile apps. See the links below for help implementing them in your PhoneGap apps.
-- Attend Simon MacDonald's **Push Notifications** Workshop today at 2:15
-- [Simon's MacDonald's PhoneGap Day Push Notification Workshop](http://macdonst.github.io/push-workshop/)
+#### Steps
+1. Connect your iOS Device to your computer via USB
+2. Enable Web Inspector on the device:
+    - Open **Settings**, click on **Safari**, then **Advanced** from your device and turn on the Web Inspector toggle as shown below:
 
-### Plugin Development  
-There are a vast number of plugins currently available for Cordova but you still may find yourself needing a specific native feature that is not already
-  supported. Learn how to write your own plugin below.
+   <img class="screenshot-lg-center" src="images/ios-web-insp.png"/>
 
-- [Jesse MacFadyen's PhoneGap Day Slides](http://purplecabbage.github.io/slides/pgd16Plugins/index.html)
+3. Enable the Safari Developer Menu on your computer
+    - Open Safari and select **Preferences** from the Safari toolbar drop-down
+    - Check the box next to **Show Develop menu in menu bar** at the bottom of the screen  as shown below:
 
-### App Submission (provisioning, code signing, submitting to app stores)
-- Attend **App Submission** workshop by Shazron Abdullah at 5pm today!
-- Check out this [useful guide to App Submission](https://github.com/timkim/phonegap-day-workshop-app-submission/wiki) built by the PhoneGap Team.  
+    <img class="screenshot-lg" src="images/safari-dev-menu.png"/>
 
-### Adding Analytics
-Analytics can be used to determine how your app is being used, which features are popular and where your pain points are.  
--[Adding Analytics to your PhoneGap Apps](http://phonegap.com/blog/2015/08/18/adding-analytics-to-your-phonegap-app/)
+4. Run the mobile PhoneGap application you want to debug on your device or simulator from  the CLI
 
-### Updating your App (Over the Air Updates)
-Update your apps in the iOS App Store quickly without waiting on long approval processes using over the air updates. Use the following links as potential resources:
+		 $ phonegap run ios  
+		 $ phonegap run ios --emulator
 
-- [Code Push Plugin (using MS CodePush Service)](https://www.npmjs.com/package/cordova-plugin-code-push)
-- [Hot Code Cordova Push Plugin](https://www.npmjs.com/package/cordova-plugin-code-push) and [associated CLI](https://www.npmjs.com/package/cordova-hot-code-push-cli)     
-- [Learn how exFM did it](http://phonegap.com/blog/2013/04/23/story-behind-exfm/) (read the section titled *Loading Assets*).        
-- [Ionic Deploy](http://docs.ionic.io/docs/deploy-from-scratch) service
+5. Open the newly enabled **Develop** menu in Safari and locate the name of your connected device in the drop down:
 
-### A/B Testing
-Experiment with your app and see what works best. Change colors, layout, images, marketing copy or whatever you want to test to
-  understand the impact of the change by using an A/B testing service.
+    <img class="screenshot-lg" src="images/safari-develop.png"/>
 
-Below are some plugins for services supporting PhoneGap apps:  
+6. Select it and start debugging your app directly on the device using the Safari Web Inspector tools.
 
-- [Optimizely Cordova Plugin](https://github.com/optimizely/optimizely-cordova-plugin)
-- [Leanplum Cordova Plugin](https://github.com/Telerik-Verified-Plugins/Leanplum/blob/master/doc/index.md)
+  <img class="screenshot-lg" src="images/safari-web-insp.png"/>
 
-#### Performance Tips
-+ [Managing Click Delay](guides/managing-click-delay.html)
-+ [Using CSS Sprite Sheets](guides/perf-tip-css-sprite-sheets.html)
-+ [Hardware Acceleration](guides/perf-tip-hardware-acceleration.html)
-+ [Paint Before Animate](guides/perf_tip_paint_before_you_animate.html)
-+ [Minimize Reflows](guides/perf-tip-minimize-reflows.html)
-+ [Serve Images at Resolution](guides/perf-tip-serve-images-at-resolution.html)
+<div class="alert--info">Check out the [Safari Web Inspector Official Documentation](https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Introduction/Introduction.html) for details about what you can do with the tools.</div>
+
+### Android Device Debugging via Chrome
+
+You can remotely debug your Android applications running on your device in a similar way to the above using Chrome. Follow the steps below to get started.
+
+#### Requirements
+- USB Cable
+- Chrome Version 32+
+- Android Device
+
+#### Steps
+1. Connect your Android Device to your computer via USB
+
+2. Enable Developer mode on your device - from your Android device, open up Settings and scroll down to **About phone**, scroll down to the **Build number** and tap on it 7 times:
+
+   <img class="screenshot-lg-center" src="images/build-number.png"/>
+
+3. Go back to the previous Settings screen and locate the new developer options item:
+
+   <img class="screenshot-lg-center" src="images/android-dev-options.png"/>
+
+4. Tap into it and turn on USB Debugging (and any other settings you may need):
+
+   <img class="screenshot-lg-center" src="images/usb-debug.png"/>
+
+5. Run the mobile PhoneGap application you want to debug on the device from the CLI using `$ phonegap run android`         	
+
+6. Open Chrome on your computer and type `chrome://inspect/` for the URL location
+
+7. From the **Devices** menu option on the left you should see your device with a list of web applications running on it including WebView applications. Locate your app in the list.
+
+   <img class="screenshot-lg" src="images/chrome-inspect.png"/>
+
+8. Click *inspect* and start debugging your application directly on your device using the Chrome DevTools.  
+
+   <img class="screenshot-lg" src="images/chrome-devtools.png"/>
+
+>Check out the [Chrome DevTools Official Documentation](https://developer.chrome.com/devtools/docs/remote-debugging) for details about what you can do with the tools.</div>
+
+
+### Debugging Apps Running in PhoneGap Developer App
+Currently you can use the Weinre remote inspection tool for debugging your apps running on the PhoneGap Developer App on your device. A guide on
+how to use this can be found [here in our PhoneGap Docs](http://docs.phonegap.com/references/developer-app/debugging/.
+
+
+### Additional Debugging Resources:
+- [GapDebug](https://www.genuitec.com/products/gapdebug/)
 
 <div class="row" style="margin-top:40px;">
 <div class="col-sm-12">
-<a href="lesson8.html" class="btn btn-default"><i class="glyphicon glyphicon-chevron-left"></i> Previous</a>
-<a href="lesson10.html" class="btn btn-default pull-right">Next <i class="glyphicon
+<a href="lesson7.html" class="btn btn-default"><i class="glyphicon glyphicon-chevron-left"></i> Previous</a>
+<a href="lesson9.html" class="btn btn-default pull-right">Next <i class="glyphicon
 glyphicon-chevron-right"></i></a>
-
 </div>
 </div>
