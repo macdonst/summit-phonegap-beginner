@@ -7,13 +7,13 @@ In this lesson we'll walk through the base Star Track app to learn how it works 
 of including a bit about some Framework7 components and settings specifically. Through this exercise we'll also gain an
 understanding of how a [Single Page Application](guides/single-page-architecture.html) works.
 
->**A Single Page App** is an app that loads a single HTML page and dynamically updates that page as the user interacts with the app. 
+>**A Single Page App** is an app that loads a single HTML page and dynamically updates that page as the user interacts with the app.
 SPAs use AJAX and HTML5 to create fluid and responsive Web apps without constant page reloads.
 <br><a href="https://msdn.microsoft.com/en-us/magazine/dn463786.aspx">Source</a><br>
 
 ## Framework7 initialization
 When you initialize your app in Framework7, there are various parameters you could specify depending on how you
-want things to work in your app. Review the [docs here](http://framework7.io/docs/init-app.html) for all of the options available. 
+want things to work in your app. Review the [docs here](http://framework7.io/docs/init-app.html) for all of the options available.
 In the Star Track app, the following are used and set in the `www/js/my-app.js` file:
 
     var myApp = new Framework7({
@@ -22,7 +22,7 @@ In the Star Track app, the following are used and set in the `www/js/my-app.js` 
       precompileTemplates: true,           // auto compile all templates
       swipePanel: 'left',                  // enable swipe for side panels
       swipePanelActiveArea: '30',          // Width to trigger swipe panel
-      swipeBackPage: true,                 // Swipe back from left edge 
+      swipeBackPage: true,                 // Swipe back from left edge
       animateNavBackIcon: true,            // Dynamic navbar icon animation
       pushState: !!Framework7.prototype.device.os,  //enable hash navigation in browser mode
     });
@@ -43,15 +43,15 @@ For this workshop, let's set it to a combination of the following to match the S
 
     <body class="layout-dark theme-green">
 
-There are a couple more minor changes to make before moving on here due to the change for the dark theme. We need to modify the 
+There are a couple more minor changes to make before moving on here due to the change for the dark theme. We need to modify the
 `www/css/styles.css` file to remove the background color specificlly set for iOS panel so the dark theme applies.
 **Remove** the following style setting:
 
     .ios .panel {
       background-color: #ffffff;
     }
- 
-We'll also want to update the `statusbar-overlay` settings to use a dark background and white font for iOS. While in the `styles.css` file, 
+
+We'll also want to update the `statusbar-overlay` settings to use a dark background and white font for iOS. While in the `styles.css` file,
 comment out the current `statusbar-overlay` background settings and set it to black instead as shown below:
 
     /* Use for light background apps */
@@ -65,12 +65,12 @@ comment out the current `statusbar-overlay` background settings and set it to bl
     }
 
 Lastly we'll need to open the `config.xml` file and comment out the `StatusBarStyle` preference since it's currently set for
-to default which will use black font.  When the statusbar plugin is added it will be set to 
-`lightcontent` by default which is white text and what we want in this case. Comment this out as shown below. 
+to default which will use black font.  When the statusbar plugin is added it will be set to
+`lightcontent` by default which is white text and what we want in this case. Comment this out as shown below.
 
-    <!--<preference name="StatusBarStyle" value="default" />--> 
-    
->The color themes will be applied a bit differently between platforms. You could also apply specific themes to sub-elements within the body as well, like page, view, navbar, list-block etc. Refer to [the docs](http://framework7.io/docs/color-themes.html) for more details on other classes that can be used to change the background color, font color and border color in their utility classes 
+    <!--<preference name="StatusBarStyle" value="default" />-->
+
+>The color themes will be applied a bit differently between platforms. You could also apply specific themes to sub-elements within the body as well, like page, view, navbar, list-block etc. Refer to [the docs](http://framework7.io/docs/color-themes.html) for more details on other classes that can be used to change the background color, font color and border color in their utility classes
 as well.      
 
 
@@ -87,7 +87,7 @@ Single page applications are considered the best approach for hybrid app develop
 - **Page** - Similar to a web page, this is what we're transitioning between. There can be many pages within a single view.
 
 - **Side Panel** - You can use up to 2 panels in an app, one on left side and another one on right side and they should be added to the beginning of the body tag. These panels are hidden initially and can be used
-for a side menu. You can also specify an effect when the panel is shown by setting a class to either `panel-cover` or `panel-reveal`. Modify yours now, then try clicking the hamburger icon to 
+for a side menu. You can also specify an effect when the panel is shown by setting a class to either `panel-cover` or `panel-reveal`. Modify yours now, then try clicking the hamburger icon to
 trigger the panel to open to see the difference.
 
       <div class="panel panel-left panel-reveal">
@@ -95,8 +95,8 @@ trigger the panel to open to see the difference.
 <br>
 
 #### Views and Pages
-Based on the above terminology, in our Star Track App we are using one **view** (stack of pages called main view) and we navigate between these pages by 
-loading different **templates** into the main view container along with the required **data** to bind to that page so the expressions are properly evaluated. This is based 
+Based on the above terminology, in our Star Track App we are using one **view** (stack of pages called main view) and we navigate between these pages by
+loading different **templates** into the main view container along with the required **data** to bind to that page so the expressions are properly evaluated. This is based
 on the [**Single Page Architecture**](guides/single-page-architecture.html) approach and helps ensure your hybrid apps are performant.
 
 The high level DOM hierarchy to describe the app looks like this.
@@ -154,7 +154,7 @@ The other *pages* for the app are defined in [Template7 templates](http://framew
           -
       </script>    
 
-Open the app in the browser and view it with the Chrome devtools to notice how the pages are loaded from the templates and 
+Open the app in the browser and view it with the Chrome devtools to notice how the pages are loaded from the templates and
 removed depending on what action you take.
 
 <br>

@@ -11,12 +11,12 @@ will not need to implement them in this particular app but it's important to be 
     - Remove the highlight effect when tapping on a link if you're not handling it properly:
 
     <img class="screenshot-md" src="images/webkit-tap-highlight.png"/>
-        
+
     Fix with:
-    
+
          -webkit-tap-highlight-color: rgba(0,0,0,0);
          -webkit-tap-highlight-color: transparent;
-            
+
     Hold tap on a list item or other element and notice how it's affected when the above is not set..                         
 
 1. **Disable user selections** on actionable elements (for instance a select on a long tap)
@@ -62,13 +62,13 @@ will not need to implement them in this particular app but it's important to be 
 4. **Use System Fonts**
 
    Ensure you're using the fonts native to the platform. Here's some general rules:
-    
+
     - iOS: `font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;`
 
     - Android: `font-family: 'RobotoRegular', 'Droid Sans', sans-serif;`
 
     - Windows Phone: `font-family: 'Segoe UI', Segoe, Tahoma, Geneva, sans-serif;`
-  
+
 5. **Manage Click Delay** - ensure you're using [FastClick](https://github.com/ftlabs/fastclick) or something similar to handle tap delay on mobile.
 
 >All of the tips in the above list are already built into Framework7 but important to understand when building hybrid apps.
@@ -82,7 +82,7 @@ If you're running an app through the CLI on a native simulator or device (outsid
 Open up to inspect and modify some of the CSS properties applied from the Framework7 CSS.
 
 1. Change tap highlight to a color instead of transparent, such as `-webkit-tap-highlight-color: green;`. Then try clicking on one of the links on the side panel
-menu to see what happens. 
+menu to see what happens.
 2. Comment out `-webkit-touch-callout: none;` or change it to another value. Then hold down (long tap) on a link.
 3. Comment out `-webkit-appearance: none;`
 4. While in the results view of the app, comment out the `-webkit-overflow-scrolling: touch;` property in the `.page-content` definition and notice the
@@ -97,12 +97,12 @@ then add `-webkit-user-select: none;` to the `.body` definition in the CSS and t
     <img class="screenshot-md" src="images/without-lazy-load.png"/>
     <img class="screenshot-md" src="images/lazy-load-class.png"/>
     <img class="screenshot-md" src="images/with-lazy-load.png"/>
-    
+
     In Framework7 you can easiy use lazy loading by specifying `class="lazy"` on an `<img>` tag and ensuring you're using `data-src`
     not just `src`. For example:
-    
+
         <img width="80" data-src="{{this.album.images[0].url}}" class="lazy">
-        
+
    **BONUS STEP**
    - Update your app to use lazy loading on images where you feel necessary and check to see the difference. You should see a grey box load
    initially until the image is loaded indicating there is indeed an image there.      

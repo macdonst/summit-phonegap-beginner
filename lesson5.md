@@ -65,12 +65,12 @@ item clicked. It also sets a different share icon based on the platform.
                     {{/if}}                      
                 </div>
 
-     
+
 
      {% endraw %}
 
-2. In the above definition we have an icon which acts as a button in the `swipeout-actions-right` 
-but it doesn't actually do anything yet. It requires click handling code to invoke a *share* feature 
+2. In the above definition we have an icon which acts as a button in the `swipeout-actions-right`
+but it doesn't actually do anything yet. It requires click handling code to invoke a *share* feature
 that will be added in the next lesson.
 
 4. Run your app to ensure you see the new swipeout action on the right side when you swipe on a list item.

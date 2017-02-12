@@ -4,22 +4,22 @@ title: Module 1&#58; Project Setup
 ---
 
 ## Retrieve the Final Solution App
-The final version of the project we'll be building in this workshop is located at [http://github.com/macdonst/wwc-london-star-track](https://github.com/macdonst/wwc-london-star-track).
+The final version of the project we'll be building in this workshop is located at [http://github.com/macdonst/summit-phonegap-essentials](https://github.com/macdonst/summit-phonegap-essentials).
 Before moving forward we'll create a local project with it for reference.
 
 #### Steps
-1. Create a working directory named `wwcl` on your hard drive
-2. From the command line, `cd` into it, then use the PhoneGap CLI with the following command to create a local version of the final project named `wwc-london-star-track`
+1. Create a working directory named `summit` on your hard drive
+2. From the command line, `cd` into it, then use the PhoneGap CLI with the following command to create a local version of the final project named `summit-phonegap-essentials`
 
-        phonegap create wwc-london-star-track --template https://github.com/macdonst/wwc-london-star-track
+        phonegap create summit-phonegap-essentials --template https://github.com/macdonst/summit-phonegap-essentials
 
    Alternatively you could use git to clone the project as well:
 
-        git clone https://github.com/macdonst/wwc-london-star-track
+        git clone https://github.com/macdonst/summit-phonegap-essentials
 
-2. At this point you should have a folder called `wwc-london-star-track` containing the copy of the final project in your working directory:
+2. At this point you should have a folder called `summit-phonegap-essentials` containing the copy of the final project in your working directory:
 
-        ~/wwcl/wwc-london-star-track
+        ~/summit/summit-phonegap-essentials
 
 >This final project can be used for reference in case you get stuck at any point in the workshop or simply want to
 follow along using it rather than code from your own version.
@@ -32,7 +32,7 @@ the base Star Track sample with some additional features. The final result shoul
   `npm install -g phonegap`. PhoneGap CLI 6.2.2 had a bug that could interfere with certain parts of this workshop so please ensure you're not using
 that version. To check simply run the command `phonegap -v`.
 
-1. `cd` back into the root of the working directory (`~/wwcl/`)
+1. `cd` back into the root of the working directory (`~/summit/`)
 
 2. Create a new PhoneGap project using the PhoneGap CLI and passing the name of the starter *Star Track* PhoneGap template.
 
@@ -44,8 +44,8 @@ that version. To check simply run the command `phonegap -v`.
 
 3. By the end of this step you should have two folders in your working directory:
 
-    - `~/wwcl/wwc-london-star-track` - the final project for reference
-    - `~/wwcl/myStarTrack`         - the base star track app to enhance
+    - `~/summit/summit-phonegap-essentials` - the final project for reference
+    - `~/summit/myStarTrack`         - the base star track app to enhance
 
 >You can view the list of PhoneGap templates available by running `phonegap template list` from the
 PhoneGap CLI.     
@@ -62,7 +62,7 @@ To try it out, choose from the following options:
 - `Serve` your app and view it with the PhoneGap Developer App on a mobile device or in the browser (recommended approach).
 
    - **Serve with PhoneGap CLI**
-     1. From the command line, first ensure you're in the root of your new project (`~wwcl/myStarTrack`)
+     1. From the command line, first ensure you're in the root of your new project (`~summit/myStarTrack`)
      2. Run `phonegap serve`
      3. Connect to the URL reported from the `serve` command in the PhoneGap Developer app on a mobile device (or in a browser using `localhost` and the port number from the command)
 

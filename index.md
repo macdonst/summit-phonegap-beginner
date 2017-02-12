@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Women Who Code London PhoneGap Essentials Workshop
+title: Digital Marketing Summit PhoneGap Essentials Workshop
 ---
 
 ## What You Will Learn
@@ -10,13 +10,13 @@ about building hybrid mobile apps using a sample template developed by the Phone
 UI framework. The chosen framework could have been anything but the goal was to use something with a familiar
 syntax and since Framework7 has a built-in DOM manipulation library with the same syntax as jQuery, it's the
 easiest to get started with. We will enhance the Star Track app with some additional features and the resulting
-app can be found in this [Women Who Code London Star Track repo](https://github.com/macdonst/wwc-london-star-track) from my github.
+app can be found in this [Digital Marketing Summit Star Track repo](https://github.com/macdonst/summit-phonegap-essentials) from my github.
 
 We will focus less on the Framework7 library and more on the certain aspects of mobile development you should be
 most aware of when building hybrid apps in general. This includes best practices and performance techniques as well as adding and using Cordova plugins to add additional functionality that will enhance your apps and provide a more native experience.
 
 The sample app project is located on my associated
-GitHub repo [here](https://github.com/macdonst/wwc-london-star-track). 
+GitHub repo [here](https://github.com/macdonst/summit-phonegap-essentials).
 
 <img class="screenshot" src="images/and-screens.jpg"/>
 
@@ -59,7 +59,7 @@ tips and tricks to make your app feel and perform natively outside of a specific
 
 
 ## Issues/Feedback
-- Please create an issue [here](https://github.com/macdonst/wwc-london-star-track/issues) if you run
+- Please create an issue [here](https://github.com/macdonst/summit-phonegap-essentials/issues) if you run
 into any problems or if you have feedback.
 
 - You can also use the Comments section at the bottom of each module to ask a question or report a problem.
@@ -71,14 +71,14 @@ into any problems or if you have feedback.
     @macdonst</a>
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
-    <a href="https://twitter.com/aniskadri" class="twitter-follow-button" data-show-count="true"
+    <a href="https://twitter.com/stevesgill" class="twitter-follow-button" data-show-count="true"
     data-size="large" data-lang="en">Follow
-    @aniskadri</a>
+    @stevesgill</a>
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
 
 ## Slides
-[Presentation Slides](https://github.com/macdonst/wwc-london-star-track/blob/gh-pages/preso/www/index.html)
+[Presentation Slides](https://github.com/macdonst/summit-phonegap-essentials/blob/gh-pages/preso/www/index.html)
 
 <div class="row" style="margin-top:40px;">
 <div class="col-sm-12">

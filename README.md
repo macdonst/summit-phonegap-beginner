@@ -1,13 +1,13 @@
-## PhoneGap Day EU Essentials Workshop App
+## Digital Marketing Summit PhoneGap Essentials Workshop App
 
 ### Full Tutorial
-Please use the tutorial associated with this workshop, found [here](http://macdonst.github.io/wwc-london-star-track).
+Please use the tutorial associated with this workshop, found [here](http://macdonst.github.io/summit-phonegap-essentials).
 
 ###Quick Start
 
 1. Retrieve a version of this project using the PhoneGap CLI with:
 
-      $ phonegap create wwc-london-star-track --template https://github.com/macdonst/wwc-london-star-track
+      $ phonegap create summit-phonegap-essentials --template https://github.com/macdonst/summit-phonegap-essentials
 
 2. Use the PhoneGap CLI or PhoneGap Desktop application to `serve` the app
 
