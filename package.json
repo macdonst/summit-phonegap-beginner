@@ -1,10 +1,10 @@
 {
-  "name": "wwc-london-star-track",
+  "name": "summit-phonegap-essentials",
   "version": "1.0.0",
   "description": "> A Hello World template built with PhoneGap",
   "repository": {
     "type": "git",
-    "url": "https://github.com/macdonst/wwc-london-star-track.git"
+    "url": "https://github.com/macdonst/summit-phonegap-essentials.git"
   },
   "author": "PhoneGap Team",
   "license": "Apache-2.0",
@@ -15,7 +15,7 @@
     "phonegap:template"
   ],
   "bugs": {
-    "url": "https://github.com/macdonst/wwc-london-star-track/issues"
+    "url": "https://github.com/macdonst/summit-phonegap-essentials/issues"
   },
-  "homepage": "https://github.com/macdonst/wwc-london-star-track"
+  "homepage": "https://github.com/macdonst/summit-phonegap-essentials"
 }
